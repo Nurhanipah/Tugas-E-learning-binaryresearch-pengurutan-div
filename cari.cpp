@@ -41,7 +41,7 @@ int main(){
 	
 	
 	i=0;
-	k=i+1;
+	k=j-1;
 	
 	while(i<=k){
 		j=(i+k)/2;
@@ -49,7 +49,7 @@ int main(){
 			ketemu=true;
 			break;
 		}
-		else if(key>data[j]){
+		else if(key<data[j]){
 		k=j-1;
 		}
 	}
