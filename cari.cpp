@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 	int data[10], i, j, k, key, tempt;
-
+	bool ketemu = false; 
 	
 	for (int i=0 ; i<10; i++){
 		cout << " masukan angka ke " << (i+1) << " : ";
@@ -40,25 +40,23 @@ int main(){
 	cin >> key;
 	
 	
-	i=1;
-	k=10;
+	i=0;
+	k=i+1;
 	
 	while(i<=k){
 		j=(i+k)/2;
 		if(key==data[j]){
-			cout << " Data ditemukan!!! "<<endl;
-			
+			ketemu=true;
 			break;
 		}
 		else if(key>data[j]){
-			i=j+1;
-		} else if (key < k){
-			k=j-1;
+		k=j-1;
 		}
 	}
-	
-	if(key<1 || key>10){
-		cout << " Data Tidak Ditemukan!!! "<< endl;
+	if(ketemu==true){
+	cout << " Data ditemukan!!! "<<endl;
+	}else{
+	cout << " Data Tidak Ditemukan!!! "<< endl;
 		
 	}
 	
